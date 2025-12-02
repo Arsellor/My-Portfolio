@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - A.T</title>
+    
+    <!-- Font Awesome CDN pour police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Police d'écriture -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN pour icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Fichiers CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+
+        <!--
+        -# PHOTO OU AVATAR
+        -->
+
+        <section class="header-identity fullscreen-section">
+            <figure class="header-fig">
+                <img src="image/image.png"
+                alt="Photo de profil de la créatrice du site"
+                width="200"
+                height="200"
+                class="header-img">
+                <figcaption class="header-caption">Photo de profil</figcaption>
+            </figure>
+            <h1 class="header-title">Portfolio d'A.T</h1>
+        </section>
+
+        <!--
+        -# BARRE DE NAVIGATION
+        -->
+
+                <!-- ZONE NAVIGATION -->
+        <section class="header-nav fullscreen-section">
+            <nav class="nav-primary" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a href="../seance11/projets.html">Projets</a></li>
+                    <li class="nav-item">
+                    <a href="https://www.univ-littoral.fr/" target="_blank" rel="noopener">ULCO</a>
+                    </li>
+                </ul>
+            </nav>
+
+        <hr class="nav-divider">
+
+            <nav class="nav-secondary" aria-label="Navigation de la page">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#about">À propos</a></li>
+                    <li class="nav-item"><a href="#competence">Compétences</a></li>
+                    <li class="nav-item"><a href="#gallerie">Galerie</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+
+        <!--
+        -#SECTION À PROPOS 
+        -->
+        <article id="about" data-page="about">
+            <!-- Bouton retour vers l'accueil -->
+            <a href="#home" class="bouton-retour" title="Retour à l'accueil">←</a>
+            
+            <header>
+                <h2 class="h2 article-title">À propos</h2>
+            </header>
+
+            <section>
+                <p>Je m'appelle A.T. J'étudie l'informatique à l'ULCO de Calais et je suis passionnée par le développement web et la programmation.</p>
+            </section>
+        </article>
+
+        <!--
+        -#SECTION COMPETENCES
+        -->
+
+        <article id="competence" data-page="competence">
+            <!-- Bouton retour vers l'accueil -->
+            <a href="#home" class="bouton-retour" title="Retour à l'accueil">←</a>
+
+            <header>
+                <h2 class="h2 article-title">Compétences</h2>
+            </header>
+
+            <section>
+                <h3>Formation</h3>
+                <p>Parcours académique en informatique avec une base solide en sciences fondamentales :</p>
+                <ol>
+                    <li>Bac +1 : Licence informatique</li>
+                    <li>Bac Général et technologique : Maths, Physique, Maths expertes</li>
+                </ol>
+            </section>
+
+            <section>
+                <h3>Mes compétences techniques</h3>
+                <p>Maîtrise des langages de programmation suivants :</p>
+                <ol>
+                    <li>Python - Développement d'applications et scripts</li>
+                    <li>HTML/CSS - Création de sites web structurels</li>
+                    <li>C/C++ - Programmation système et algorithmique</li>
+                </ol>
+            </section>
+
+            <section>
+                <h3>Tableau des compétences</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Compétence</th>
+                            <th>Niveau</th>
+                            <th>Années d'expérience</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Python</td>
+                            <td>Intermédiaire</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>C/C++</td>
+                            <td>Intermédiaire</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>HTML/CSS</td>
+                            <td>Intermédiaire</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+
+        <!--
+        -#SECTION GALLERIE 
+        -->
+
+        <article id="gallerie" data-page="gallerie">
+            
+            <!-- Bouton retour vers l'accueil -->
+            <a href="#home" class="bouton-retour" title="Retour à l'accueil">←</a>
+
+            <header>
+                <h2 class="h2 article-title">Gallerie</h2>
+            </header>
+
+            <section>
+                <h3>Centres d'intérêt</h3>
+                
+                <ol>
+                    <li>
+                        <section>
+                            <h4>Loisirs</h4>
+                            <figure>
+                                <a href="projets.html">
+                                    <img src="image/cuisine.png" alt="Plat culinaire" />
+                                </a>
+                                <figcaption>Loisirs culinaires</figcaption>
+                            </figure>
+                        </section>
+                    </li>
+                    
+                    <li>
+                        <section>
+                            <h4>Paysage et Nature</h4>
+                            <figure>
+                                <a href="projets.html">
+                                    <img src="image/montagne.png" alt="Paysage montagneux" />
+                                </a>
+                                <figcaption>Paysage de montagne</figcaption>
+                            </figure>
+                            
+                            <figure>
+                                <a href="projets.html">
+                                    <img src="image/montagne(2).jpg" alt="Autre paysage montagneux" />
+                                </a>
+                                <figcaption>Autre vue montagneuse</figcaption>
+                            </figure>
+                        </section>
+                    </li>
+                </ol>
+            </section>
+        </article>
+
+        <!--
+        -#SECTION CONTACT
+        -->
+
+        <article id="contact" data-page="contact">
+            
+            <!-- Bouton retour vers l'accueil -->
+            <a href="#home" class="bouton-retour" title="Retour à l'accueil">←</a>
+
+            <header>
+                <h2 class="h2 article-title">Contact</h2>
+            </header>
+
+            <section class="contact-info">
+                <p><strong>Localisation :</strong> Étudie à ULCO de Calais, France</p>
+                <p><strong>Téléphone :</strong> Disponible sur demande</p>
+                <p><strong>Email universitaire :</strong> <a href="mailto:A.T@etu.univ-littoral.fr">A.T@etu.univ-littoral.fr</a></p>
+                <p><strong>Email personnel :</strong> <a href="mailto:ar@gmail.com">A.T0@gmail.com</a></p>
+                <p>N'hésitez pas à me contacter pour toute opportunité de collaboration ou d'échange !</p>
+            </section>
+
+            <!--iFrame--> 
+            <section class="mapbox" data-mapbox>
+                <figure>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2513.405229504428!2d1.8761957760922652!3d50.953211651037726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dc4080e9a7d7bb%3A0x4473bdca0c4169a9!2sUniversit%C3%A9%20du%20Littoral%20C%C3%B4te%20d'Opale%20-%20CAMPUS%20CALAIS!5e0!3m2!1sfr!2sfr!4v1762509999907!5m2!1sfr!2sfr"
+                        width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </figure>
+            </section>
+
+            <!--Formulaire de contact--> 
+            <section class="contact-form">
+                <h3 class="h3 form-title">Formulaire de contact</h3>
+
+                <form action="#" class="form" data-form>
+                    
+                    <input type="text" name="fullname" class="form-input" placeholder="Nom complet" required data-form-input>
+                    
+                    <input type="email" name="email" class="form-input" placeholder="Adresse email" required data-form-input>
+
+                    <textarea name="message" class="form-input" placeholder="Votre message ici..." rows="5" required data-form-input></textarea>
+
+                    <button class="form-btn" type="submit" disabled data-form-btn>
+                        <ion-icon name="paper-plane"></ion-icon>
+                        <span>Envoyer</span>
+                    </button>
+
+                </form>
+            </section>
+
+        </article>
+
+    </main>
+
+</body>
+
+</html>
