@@ -18,8 +18,40 @@
     --ombre-texte: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
-/* ===== RESPONSIVE WEB DESIGN ===== */
+/* ===== POLICES LOCALES ===== */
+@font-face {
+    font-family: 'Audiowide';
+    src: url('../polices/Audiowide-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'BBH Sans Bogle';
+    src: url('../polices/BBHBogle-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Faculty Glyphic';
+    src: url('../polices/FacultyGlyphic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nabla';
+    src: url('../polices/Nabla-Regular-VariableFont_EDPT_EHLT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===== RESPONSIVE WEB DESIGN ===== */
 img, video {
   max-width: 100%;
   height: auto;
