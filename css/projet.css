@@ -1,7 +1,19 @@
-/* ===== IMPORTS ET RÉUTILISATION ===== */
-@import url('variables.css');
+/* ===== VARIABLES DE SECOURS SI variables.css MANQUANT ===== */
+:root {
+    --noir-tres-fonce: #0a0a0a;
+    --noir-fonce: #1c1c1c;
+    --noir-moyen: #2a2a2a;
+    --pastel-vert: #a5ffa5;
+    --gris-clair: #f0f0f0;
+    --gris-moyen: #a0a0a0;
+    --transition-rapide: all 0.3s ease;
+    --transition-moyenne: all 0.5s ease;
+    --ombre-intense: 0 10px 30px rgba(0, 0, 0, 0.7);
+    --ombre-legere: 0 5px 15px rgba(165, 255, 165, 0.3);
+    --ombre-texte: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
 
-/* ===== BASE ET RÉINITIALISATION ===== */
+/* ===== RÉINITIALISATION ===== */
 * {
     margin: 0;
     padding: 0;
@@ -10,83 +22,28 @@
 
 html {
     scroll-behavior: smooth;
-    height: 100%;
 }
 
 body {
-    font-family: 'BBH Sans Bogle', 'Segoe UI', system-ui, sans-serif;
-    background: linear-gradient(135deg, 
-        var(--noir-tres-fonce) 0%, 
-        var(--noir-fonce) 50%, 
-        var(--noir-moyen) 100%);
-    color: var(--gris-clair);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 50%, #2a2a2a 100%);
+    color: #f0f0f0;
     line-height: 1.6;
     min-height: 100vh;
     overflow-x: hidden;
-    position: relative;
-    animation: fadeIn 1s var(--transition-moyenne);
-}
-
-/* Fond animé */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(165, 255, 165, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(165, 255, 165, 0.03) 0%, transparent 50%);
-    z-index: -1;
-    animation: backgroundFloat 20s infinite linear;
-}
-
-@keyframes backgroundFloat {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(10px, -10px) scale(1.05); }
-    50% { transform: translate(0, 15px) scale(1); }
-    75% { transform: translate(-10px, -5px) scale(1.05); }
 }
 
 /* ===== HEADER ===== */
 header {
-    background: linear-gradient(135deg,
-        rgba(10, 10, 10, 0.95) 0%,
-        rgba(28, 28, 28, 0.9) 100%);
-    backdrop-filter: blur(10px);
+    background: rgba(28, 28, 28, 0.95);
     border-bottom: 1px solid rgba(165, 255, 165, 0.2);
     padding: 2rem 1.5rem;
-    position: relative;
-    overflow: hidden;
+    text-align: center;
 }
 
-header::after {
-    content: '';
-    position: absolute;
-    top: 0; left: -100%;
-    width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(165, 255, 165, 0.1), transparent);
-    animation: headerShimmer 8s infinite;
-    z-index: 0;
-}
-
-@keyframes headerShimmer {
-    0% { transform: translateX(-100%) skewX(-15deg); }
-    100% { transform: translateX(200%) skewX(-15deg); }
-}
-
-/* Figure */
 .header-fig {
     display: block;
     margin: 0 auto 1.5rem;
-    text-align: center;
-    transition: var(--transition-moyenne);
-    animation: floatAvatar 6s ease-in-out infinite;
-}
-
-@keyframes floatAvatar {
-    0%, 100% { transform: translateY(0); }
-    33% { transform: translateY(-10px); }
-    66% { transform: translateY(5px); }
 }
 
 .header-img {
@@ -94,91 +51,48 @@ header::after {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid transparent;
-    background: linear-gradient(45deg, var(--pastel-vert), transparent 70%) border-box;
-    box-shadow: var(--ombre-intense), 0 0 60px rgba(165, 255, 165, 0.4);
-    transition: var(--transition-moyenne);
-    filter: grayscale(0.2);
+    border: 3px solid #a5ffa5;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
-.header-fig:hover .header-img {
-    filter: grayscale(0);
-    transform: scale(1.1);
-    box-shadow: 0 0 80px rgba(165, 255, 165, 0.8), 0 0 120px rgba(165, 255, 165, 0.4);
-    border-color: var(--pastel-vert);
-}
-
-.header-caption {
-    color: var(--gris-moyen);
-    font-style: italic;
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    transition: var(--transition-rapide);
-}
-
-.header-fig:hover .header-caption {
-    color: var(--pastel-vert);
-    opacity: 1;
-}
-
-/* Titre */
 header h1 {
-    text-align: center;
-    font-size: 2.8rem;
-    color: var(--pastel-vert);
+    font-size: 2.5rem;
+    color: #a5ffa5;
     margin-bottom: 1.5rem;
-    text-shadow: var(--ombre-texte);
-    font-family: 'Audiowide', monospace;
-    animation: titleEntry 1s var(--transition-moyenne) forwards;
-    opacity: 0;
-    transform: translateY(20px);
 }
 
-@keyframes titleEntry {
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* Navigation */
 nav {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 2rem;
     margin-top: 1.5rem;
     flex-wrap: wrap;
 }
 
 nav a {
-    color: var(--gris-clair);
+    color: #f0f0f0;
     text-decoration: none;
-    font-size: 1.1rem;
     padding: 0.7rem 1.5rem;
     border-radius: 50px;
-    transition: var(--transition-rapide);
-    background: rgba(28, 28, 28, 0.7);
+    background: rgba(40, 40, 40, 0.7);
     border: 1px solid rgba(165, 255, 165, 0.2);
-    font-family: 'Faculty Glyphic', sans-serif;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--noir-fonce);
-    background: var(--pastel-vert);
-    transform: translateY(-5px);
-    box-shadow: var(--ombre-legere);
-    border-color: var(--pastel-vert);
+    background: #a5ffa5;
+    color: #1c1c1c;
 }
 
-/* Séparateur */
 hr {
     border: none;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--pastel-vert), transparent);
+    background: linear-gradient(90deg, transparent, #a5ffa5, transparent);
     margin: 2rem auto;
     width: 80%;
-    opacity: 0.5;
 }
 
-/* ===== MAIN CONTENT ===== */
+/* ===== MAIN ===== */
 main {
     max-width: 1200px;
     margin: 3rem auto;
@@ -186,18 +100,10 @@ main {
 }
 
 main h2 {
-    font-size: 3rem;
-    color: var(--pastel-vert);
+    font-size: 2.5rem;
+    color: #a5ffa5;
     text-align: center;
     margin-bottom: 2rem;
-    text-shadow: var(--ombre-texte);
-    font-family: 'Nabla', cursive;
-    transition: var(--transition-moyenne);
-}
-
-main h2:hover {
-    transform: scale(1.05);
-    text-shadow: 0 0 30px rgba(165, 255, 165, 0.8);
 }
 
 main p {
@@ -207,92 +113,24 @@ main p {
     background: rgba(28, 28, 28, 0.5);
     padding: 1.5rem;
     border-radius: 15px;
-    border-left: 4px solid transparent;
-    transition: var(--transition-rapide);
-    animation: slideInRight 0.6s var(--transition-moyenne) forwards;
-    opacity: 0;
-    transform: translateX(-20px);
-}
-
-@keyframes slideInRight {
-    to { transform: translateX(0); opacity: 1; }
-}
-
-main p:nth-child(2) { animation-delay: 0.2s; }
-main p:nth-child(3) { animation-delay: 0.4s; }
-main p:nth-child(4) { animation-delay: 0.6s; }
-
-main p:hover {
-    border-left-color: var(--pastel-vert);
-    transform: translateX(5px);
-    box-shadow: var(--ombre-legere);
-    background: rgba(28, 28, 28, 0.8);
-}
-
-main p strong {
-    color: var(--pastel-vert);
-    font-weight: 600;
+    border-left: 4px solid #a5ffa5;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background: linear-gradient(135deg, var(--noir-moyen) 0%, var(--noir-fonce) 100%);
+    background: #1c1c1c;
     border-top: 1px solid rgba(165, 255, 165, 0.2);
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.5rem;
     margin-top: 4rem;
-    position: relative;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--pastel-vert), transparent);
-}
-
-footer p {
     text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    color: var(--gris-moyen);
-    animation: fadeInUp 0.8s var(--transition-moyenne) forwards;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-@keyframes fadeInUp {
-    to { transform: translateY(0); opacity: 1; }
-}
-
-footer p:first-child { animation-delay: 0.2s; }
-footer p:last-child { animation-delay: 0.4s; }
-
-footer strong {
-    color: var(--pastel-vert);
 }
 
 footer a {
-    color: var(--gris-clair);
+    color: #a5ffa5;
     text-decoration: none;
-    transition: var(--transition-rapide);
-    position: relative;
-}
-
-footer a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; left: 0;
-    width: 0; height: 1px;
-    background: var(--pastel-vert);
-    transition: var(--transition-rapide);
 }
 
 footer a:hover {
-    color: var(--pastel-vert);
-}
-
-footer a:hover::after {
-    width: 100%;
+    text-decoration: underline;
 }
 
