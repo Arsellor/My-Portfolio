@@ -1,3 +1,6 @@
+/* ===== IMPORTS ET RÉUTILISATION ===== */
+@import url('variables.css');
+
 /* ===== BASE ET RÉINITIALISATION ===== */
 * {
     margin: 0;
@@ -292,3 +295,4 @@ footer a:hover {
 footer a:hover::after {
     width: 100%;
 }
+
