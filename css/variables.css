@@ -16,6 +16,7 @@
     --ombre-legere: 0 0 25px rgba(165, 255, 165, 0.45);
     --ombre-intense: 0 0 40px rgba(165, 255, 165, 0.7);
     --ombre-texte: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
 
 /* ===== RESPONSIVE WEB DESIGN ===== */
 
@@ -29,10 +30,13 @@ h1 {
 }
 
 /* Styles de base (Mobile First) */
-.colonne { width: 100%; }
+.colonne { 
+  width: 100%; 
+}
+
 /* Point de rupture pour les écrans plus grands */
 @media (min-width: 768px) {
-  .colonne { width: 33%; }
-}
-}
+  .colonne { 
+    width: 33%; 
+  }
 }
