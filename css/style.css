@@ -296,7 +296,14 @@ textarea.form-input {
 
 }
 
+.social-icons {
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  margin-top: 20px;           
+}
+
 .social-icons i {
-  font-size: 40px; /* taille des icônes */
-  margin: 0 10px;  /* espace horizontal entre les icônes */
+  font-size: 40px;            
+  margin: 0 10px;            
 }
