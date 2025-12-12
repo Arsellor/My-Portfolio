@@ -293,4 +293,10 @@ textarea.form-input {
 .form-btn[disabled] {
     opacity: 0.5;
     cursor: not-allowed;
+
+}
+
+.social-icons i {
+  font-size: 40px; /* taille des icônes */
+  margin: 0 10px;  /* espace horizontal entre les icônes */
 }
