@@ -1,3 +1,70 @@
+/* ===== TITRE PRINCIPAL H1 ===== */
+.portfolio-title {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--pastel-vert), #85e085);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 3rem;
+    padding: 2rem 0 1rem;
+    text-shadow: 0 0 20px rgba(165, 255, 165, 0.3);
+    letter-spacing: 2px;
+    position: relative;
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(165, 255, 165, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(165, 255, 165, 0.6);
+    }
+}
+
+.portfolio-title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--pastel-vert), transparent);
+    border-radius: 2px;
+}
+
+.portfolio-title::after {
+    content: '✦';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--pastel-vert);
+    font-size: 1.2rem;
+    animation: starSpin 2s ease-in-out infinite;
+}
+
+@keyframes starSpin {
+    0%, 100% {
+        transform: translateX(-50%) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50%) rotate(180deg);
+        opacity: 0.5;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portfolio-title {
+        font-size: 2.5rem;
+    }
+}
+
 /* ===== MAIN CONTENT ===== */
 main {
     max-width: 1200px;
